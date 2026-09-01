@@ -7,10 +7,11 @@ no build step.
 ## Files
 
 - `index.html` — the whole page.
-- `styles.css` — all styling, dark theme driven by CSS variables (`--accent` is the blue).
+- `styles.css` — all styling, dark theme driven by CSS variables (`--accent` is the neon mint).
 - `script.js` — footer year, gallery lightbox, video play/pause, active nav tab.
 - `images/` — logo, gallery placeholders, video poster (SVG placeholders, swap for photos).
 - `media/` — drop `intro.mp4` here for the video band; until then the poster is shown.
+- `CNAME` — custom domain for GitHub Pages (`rrr-infinite-turf.com`).
 
 ## Page layout
 
@@ -47,9 +48,17 @@ offset grows so a two-row header still clears the headings.
 ## Still to replace
 
 Address, phone, hours and amenities come from the Google Maps listing. Placeholders that
-need real values: the Instagram handle, `og:url`/`og:image`, the services copy, every file
-under `images/` (SVG stand-ins) and `media/intro.mp4`. Add a `CNAME` file when a custom
-domain is set up.
+need real values: the Instagram handle, `og:image`, the services copy, every file under
+`images/` (SVG stand-ins) and `media/intro.mp4`.
+
+## Custom domain
+
+Served from GitHub Pages at `rrr-infinite-turf.com` (see `CNAME`). DNS at the registrar:
+
+- `A` `@` → `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`
+- `CNAME` `www` → `rrr-infinite.github.io`
+
+Then enable Settings → Pages → Enforce HTTPS once the certificate is issued.
 
 ## Local preview
 
