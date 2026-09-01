@@ -63,8 +63,7 @@ a {
 .brand img {
   width: 36px;
   height: 36px;
-  border-radius: 8px;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .site-header nav {
@@ -128,9 +127,8 @@ a {
   width: 120px;
   height: 120px;
   margin: 0 auto 1rem;
-  border-radius: 22px;
-  object-fit: cover;
-  box-shadow: 0 0 2.5rem rgba(0, 245, 192, 0.35);
+  object-fit: contain;
+  filter: drop-shadow(0 0 1.6rem rgba(0, 245, 192, 0.45));
 }
 
 .hero h1 {

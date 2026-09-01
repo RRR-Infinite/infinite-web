@@ -1,6 +1,23 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128" role="img" aria-label="RRR Infinite logo">
-  <rect width="128" height="128" rx="24" fill="#04060a"/>
-  <rect x="4" y="4" width="120" height="120" rx="20" fill="none" stroke="#00f5c0" stroke-width="4"/>
-  <text x="64" y="60" fill="#00f5c0" font-family="system-ui, sans-serif" font-size="34" font-weight="800" text-anchor="middle">RRR</text>
-  <text x="64" y="92" fill="#e6e9ef" font-family="system-ui, sans-serif" font-size="22" font-weight="600" text-anchor="middle">&#8734;</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128" role="img" aria-label="RRR Infinite Turf logo">
+  <defs>
+    <clipPath id="f1c"><path d="M64 6l50 19v44c0 29-25 46-50 53-25-7-50-24-50-53V25z"/></clipPath>
+    <linearGradient id="f1o" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#00f5c0"/><stop offset="0.5" stop-color="#3ba6ff"/><stop offset="1" stop-color="#b026ff"/>
+    </linearGradient>
+    <linearGradient id="f1t" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#c6ff4f"/><stop offset="1" stop-color="#00b86b"/>
+    </linearGradient>
+  </defs>
+  <g clip-path="url(#f1c)">
+    <rect width="128" height="128" fill="url(#f1t)"/>
+    <g fill="#04381f" fill-opacity="0.09">
+      <rect y="16" width="128" height="16"/><rect y="48" width="128" height="16"/>
+      <rect y="80" width="128" height="16"/><rect y="112" width="128" height="16"/>
+    </g>
+  </g>
+  <path d="M64 6l50 19v44c0 29-25 46-50 53-25-7-50-24-50-53V25z" fill="none" stroke="url(#f1o)" stroke-width="5"/>
+  <text x="64" y="54" fill="#04381f" font-family="system-ui, sans-serif" font-size="27" font-weight="800" letter-spacing="1" text-anchor="middle">RRR</text>
+  <g transform="translate(37.6 51.6) scale(2.2)" fill="none" stroke="url(#f1o)" stroke-width="2.8" stroke-linejoin="round"><path d="M18.6 6.62c-1.44 0-2.8.56-3.77 1.53L12 10.66 10.48 12h.01L7.8 14.39c-.64.64-1.49.99-2.4.99-1.87 0-3.39-1.51-3.39-3.38S3.53 8.62 5.4 8.62c.91 0 1.76.35 2.44 1.03l1.13 1 1.51-1.34L9.22 8.2C8.2 7.18 6.84 6.62 5.4 6.62 2.42 6.62 0 9.04 0 12s2.42 5.38 5.4 5.38c1.44 0 2.8-.56 3.83-1.58l2.6-2.3.01.01L14.2 15.9c1.02 1.02 2.38 1.58 3.82 1.58 2.98 0 5.4-2.42 5.4-5.38s-2.42-5.38-5.4-5.38z"/></g>
+  <rect x="31" y="96" width="66" height="14" rx="3" fill="#04381f"/>
+  <text x="64" y="106.5" fill="#c6ff4f" font-family="system-ui, sans-serif" font-size="6.2" font-weight="800" letter-spacing="0.5" text-anchor="middle">INFINITE TURF</text>
 </svg>
