@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800" role="img" aria-label="RRR Infinite intro clip placeholder">
+  <rect width="1200" height="800" fill="#0f1218"/>
+  <circle cx="600" cy="330" r="130" fill="none" stroke="#5b8cff" stroke-width="10" opacity="0.5"/>
+  <path d="M560 265l130 65-130 65z" fill="#5b8cff" opacity="0.6"/>
+  <text x="600" y="560" fill="#5b8cff" font-family="system-ui, sans-serif" font-size="52" font-weight="700" text-anchor="middle">RRR Infinite</text>
+  <text x="600" y="620" fill="#9aa4b8" font-family="system-ui, sans-serif" font-size="34" text-anchor="middle">Intro clip coming soon</text>
+</svg>
