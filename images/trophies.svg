@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800" role="img" aria-label="Tournament nights placeholder">
+  <rect width="1200" height="800" fill="#221d2e"/>
+  <circle cx="600" cy="330" r="130" fill="none" stroke="#e2c15c" stroke-width="10" opacity="0.5"/>
+  <path d="M470 330h260M600 200v260" stroke="#e2c15c" stroke-width="6" opacity="0.35"/>
+  <text x="600" y="560" fill="#e2c15c" font-family="system-ui, sans-serif" font-size="52" font-weight="700" text-anchor="middle">RRR Infinite</text>
+  <text x="600" y="620" fill="#9aa4b8" font-family="system-ui, sans-serif" font-size="34" text-anchor="middle">Tournament nights</text>
+</svg>
