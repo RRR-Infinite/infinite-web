@@ -1,11 +1,12 @@
 :root {
-  --bg: #0f1218;
-  --surface: #171c26;
-  --border: #232a37;
-  --text: #e6e9ef;
-  --muted: #9aa4b8;
-  --accent: #5b8cff;
-  --accent-strong: #3f6ede;
+  --bg: #04060a;
+  --surface: rgba(10, 14, 22, 0.72);
+  --border: rgba(0, 245, 192, 0.14);
+  --text: #eafff9;
+  --muted: #7f95a4;
+  --accent: #00f5c0;
+  --accent-strong: #b026ff;
+  --glow: rgba(0, 245, 192, 0.55);
   --wrap: 60rem;
 }
 
@@ -18,7 +19,12 @@ body {
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   line-height: 1.6;
   color: var(--text);
-  background: var(--bg);
+  background:
+    radial-gradient(55rem 35rem at 12% -12%, rgba(0, 245, 192, 0.16), transparent 65%),
+    radial-gradient(45rem 32rem at 92% 6%, rgba(176, 38, 255, 0.18), transparent 65%),
+    radial-gradient(40rem 28rem at 50% 112%, rgba(0, 132, 255, 0.14), transparent 65%),
+    var(--bg);
+  background-attachment: fixed;
 }
 
 img {
@@ -40,9 +46,9 @@ a {
   justify-content: space-between;
   gap: 0.75rem;
   padding: 0.75rem 1.25rem;
-  background: rgba(15, 18, 24, 0.92);
-  backdrop-filter: blur(6px);
-  border-bottom: 1px solid var(--border);
+  background: rgba(4, 6, 10, 0.82);
+  backdrop-filter: blur(18px) saturate(160%);
+  border-bottom: 1px solid rgba(0, 245, 192, 0.22);
 }
 
 .brand {
@@ -67,8 +73,8 @@ a {
   gap: 0.35rem;
   padding: 0.3rem;
   border-radius: 999px;
-  background: rgba(35, 42, 55, 0.55);
-  border: 1px solid var(--border);
+  background: rgba(0, 245, 192, 0.05);
+  border: 1px solid rgba(0, 245, 192, 0.16);
 }
 
 .site-header nav a {
@@ -84,8 +90,8 @@ a {
 }
 
 .site-header nav a:hover {
-  color: var(--text);
-  background: rgba(91, 140, 255, 0.14);
+  color: var(--accent);
+  background: rgba(0, 245, 192, 0.1);
   transform: translateY(-1px);
 }
 
@@ -95,9 +101,9 @@ a {
 }
 
 .site-header nav a.is-active {
-  color: #0b0e14;
-  background: linear-gradient(135deg, var(--accent), var(--accent-strong));
-  box-shadow: 0 6px 16px rgba(91, 140, 255, 0.28);
+  color: #02120e;
+  background: var(--accent);
+  box-shadow: 0 0 1.4rem var(--glow);
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -122,17 +128,22 @@ a {
   width: 120px;
   height: 120px;
   margin: 0 auto 1rem;
-  border-radius: 16px;
+  border-radius: 22px;
   object-fit: cover;
+  box-shadow: 0 0 2.5rem rgba(0, 245, 192, 0.35);
 }
 
 .hero h1 {
   margin: 0;
   font-size: clamp(2rem, 6vw, 3rem);
+  letter-spacing: -0.02em;
+  color: #fff;
+  text-shadow: 0 0 0.6rem var(--glow), 0 0 2.4rem rgba(176, 38, 255, 0.45);
 }
 
 .tagline {
-  color: var(--muted);
+  color: var(--accent);
+  opacity: 0.85;
   margin: 0.5rem 0 1.5rem;
   font-style: italic;
 }
@@ -142,13 +153,15 @@ a {
   padding: 0.7rem 1.4rem;
   border-radius: 999px;
   background: var(--accent);
-  color: #0b0e14;
+  color: #02120e;
   font-weight: 600;
   text-decoration: none;
+  box-shadow: 0 0 1.6rem var(--glow);
 }
 
 .cta:hover {
-  background: var(--accent-strong);
+  background: #6bffdc;
+  box-shadow: 0 0 2.4rem rgba(0, 245, 192, 0.8);
 }
 
 .video-band {
@@ -170,8 +183,9 @@ a {
   position: relative;
   aspect-ratio: 832 / 464;
   overflow: hidden;
-  border-radius: 12px;
-  border: 1px solid var(--border);
+  border-radius: 16px;
+  border: 1px solid rgba(0, 245, 192, 0.2);
+  box-shadow: 0 0 2rem rgba(0, 245, 192, 0.12);
 }
 
 .video-toggle {
@@ -212,16 +226,20 @@ main {
 
 section {
   background: var(--surface);
+  backdrop-filter: blur(20px) saturate(150%);
   border: 1px solid var(--border);
-  border-radius: 12px;
+  border-radius: 18px;
   padding: 1.5rem;
   margin-bottom: 1.5rem;
   scroll-margin-top: 5rem;
+  box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.7);
 }
 
 h2 {
   margin-top: 0;
   font-size: 1.3rem;
+  color: #fff;
+  text-shadow: 0 0 1.6rem rgba(0, 245, 192, 0.35);
 }
 
 .facts {
@@ -236,8 +254,9 @@ h2 {
 .facts li {
   display: flex;
   flex-direction: column;
-  background: #0b0e14;
-  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border);
+  border-radius: 14px;
   padding: 0.75rem 1rem;
 }
 
@@ -245,7 +264,7 @@ h2 {
   font-size: 0.8rem;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  color: var(--muted);
+  color: var(--accent);
 }
 
 .facility-layout {
@@ -281,10 +300,16 @@ h2 {
   display: flex;
   flex-direction: column;
   gap: 0.4rem;
-  background: #0b0e14;
+  background: rgba(255, 255, 255, 0.03);
   border: 1px solid var(--border);
-  border-radius: 10px;
+  border-radius: 14px;
   padding: 1rem 1.15rem;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.facilities li:hover {
+  border-color: var(--accent);
+  box-shadow: 0 0 1.4rem rgba(0, 245, 192, 0.3);
 }
 
 .facility-name {
@@ -301,6 +326,7 @@ h2 {
   flex: none;
   fill: none;
   stroke: var(--accent);
+  filter: drop-shadow(0 0 0.4rem var(--glow));
   stroke-width: 1.6;
   stroke-linecap: round;
   stroke-linejoin: round;
@@ -357,9 +383,10 @@ h2 {
 }
 
 .map {
-  border-radius: 10px;
+  border-radius: 16px;
   overflow: hidden;
-  border: 1px solid var(--border);
+  border: 1px solid rgba(0, 245, 192, 0.2);
+  box-shadow: 0 0 2rem rgba(0, 245, 192, 0.12);
 }
 
 .map iframe {
@@ -387,8 +414,9 @@ h2 {
   margin: 0;
   border-radius: 14px;
   overflow: hidden;
-  background: #0b0e14;
-  box-shadow: 0 0.4rem 1rem rgba(0, 0, 0, 0.35);
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border);
+  box-shadow: 0 0.4rem 1rem rgba(0, 0, 0, 0.5);
 }
 
 .tile-wide {
@@ -506,8 +534,8 @@ footer {
 }
 
 .contact {
-  background: linear-gradient(145deg, #161d2e, var(--surface) 60%);
-  border-color: var(--accent-strong);
+  background: linear-gradient(145deg, rgba(0, 245, 192, 0.12), rgba(176, 38, 255, 0.14));
+  border-color: rgba(176, 38, 255, 0.45);
 }
 
 .contact-lead {
@@ -548,9 +576,9 @@ footer {
   flex-direction: column;
   gap: 0.35rem;
   padding: 1rem 1.1rem;
-  border-radius: 12px;
+  border-radius: 14px;
   border: 1px solid var(--border);
-  background: #0b0e14;
+  background: rgba(255, 255, 255, 0.03);
   color: var(--text);
   text-decoration: none;
   transition: transform 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
@@ -560,7 +588,7 @@ footer {
 .contact-card:focus-visible {
   transform: translateY(-3px);
   border-color: var(--accent);
-  box-shadow: 0 0.5rem 1.25rem rgba(91, 140, 255, 0.25);
+  box-shadow: 0 0 1.4rem rgba(0, 245, 192, 0.3);
 }
 
 .contact-label {
